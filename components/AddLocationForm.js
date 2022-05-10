@@ -12,7 +12,7 @@ const [listOfCities, setListOfCities] = useState([])
 const [matchingCitiesArray, setMatchingCitiesArray] = useState([])
 const [selectedAutoCompleteLocation, setSelectedAutoCompleteLocation] = useState(null)
 
-const coordinateUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${selectedAutoCompleteLocation? selectedAutoCompleteLocation:location}&limit=5&appid=d678350f131c461c63d5bd106622d976`; 
+const coordinateUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${selectedAutoCompleteLocation? selectedAutoCompleteLocation:location}&limit=5&appid=d678350f131c461c63d5bd106622d976`; 
 console.log(coordinates)
 
 const handleSubmit = (e)=> {
