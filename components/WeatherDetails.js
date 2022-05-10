@@ -5,7 +5,7 @@ function WeatherDetails ({state}){
         <div className="week-forecast-container details-forecast-container">
             <p className="forecast-title">Details</p>
             <div className="weather-details-container"> 
-            <img src={`http://openweathermap.org/img/wn/${state.currentLocation.current.weather[0].icon}@2x.png`} alt="weather icon"/>
+            <img src={`https://openweathermap.org/img/wn/${state.currentLocation.current.weather[0].icon}@2x.png`} alt="weather icon"/>
             <div className="daily-forecast-container daily-details-items-container">
             <DailyForecastItem dayName="Feels like"  temp={Math.round(state.currentLocation.current.feels_like-273)} key={Math.random()}/>
             <DailyForecastItem dayName="Humidity"  temp={state.currentLocation.current.humidity} key={Math.random()}/>

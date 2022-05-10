@@ -27,7 +27,7 @@ const currentFarhenheit = Math.round((currentTemp -273.15)*9/5 +32) +"F"
                 <p><AiOutlineArrowDown /> {state.degrees? Math.round(minTemp-273)+"°": minFarhenheit}</p>
             </div>
 <div className="home-temp-icon-container">
-<img src={`http://openweathermap.org/img/wn/${state.currentLocation.current.weather[0].icon}@2x.png`} alt="weather icon"/>
+<img src={`https://openweathermap.org/img/wn/${state.currentLocation.current.weather[0].icon}@2x.png`} alt="weather icon"/>
  <h1 style={{margin:"0"}}>{state.degrees? Math.round(currentTemp-273) + "°": currentFarhenheit}</h1>
             </div>
             <p className="home-temp-description">{state.currentLocation.current.weather[0].description}</p>

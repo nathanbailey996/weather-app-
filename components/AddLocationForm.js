@@ -39,6 +39,7 @@ const submitAutoCompleteLocation = (name)=>{
 
 function addLocation(){
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=d678350f131c461c63d5bd106622d976`
+    console.log(url)
         axios.get(url)
            .then(res=> dispatch({type:"AddLocation", data:{name:coordinates.name, ...res.data}}))
            .catch(err=> alert(err.message))
@@ -58,8 +59,9 @@ const handleChange = (e)=>{
 const {value} = e.target
 setLocation(value)
 
-
-axios.get("https://countriesnow.space/api/v0.1/countries/population/cities")
+const url = "https://countriesnow.space/api/v0.1/countries/population/cities"
+console.log(url)
+axios.get(url)
 .then(res=>setListOfCities(res.data.data))
 if(location.length <=3){
     setMatchingCitiesArray([])

@@ -11,7 +11,7 @@ function HourForecastItem({hour}){
     return(
         <div className="hourly-forecast-item">
     <p className="time">{formattedTime}</p>
-    <img src={`http://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`} className="weather-icon" alt="weather icon"/>
+    <img src={`https://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`} className="weather-icon" alt="weather icon"/>
     <p>{Math.round(hour.temp-273)}°</p>
 </div>
     )
